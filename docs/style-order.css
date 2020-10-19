@@ -21,4 +21,37 @@
   display: -ms-flexbox;
   display: flex;
 }
+
+.animation {
+  -webkit-animation-name: example;
+          animation-name: example;
+  -webkit-animation-duration: .5s;
+          animation-duration: .5s;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+}
+
+@-webkit-keyframes example {
+  0% {
+    opacity: .5;
+  }
+  50% {
+    opacity: .75;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes example {
+  0% {
+    opacity: .5;
+  }
+  50% {
+    opacity: .75;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 /*# sourceMappingURL=style-order.css.map */

@@ -4,6 +4,7 @@ const prev = document.getElementById('prev')
 const prevOrder = document.getElementById('prev-order')
 const next = document.getElementById('next')
 const nextOrder = document.getElementById('next-order')
+let animationActive = false;
 
 amountSlide = slide.children.length
 amountSlideOrder = slideOrder.children.length
@@ -20,13 +21,14 @@ showSlideOrder = (next) => {
     
     slideOrder.children[activeSlideOrder].style.order = 0
     activeSlideOrder += next
-    console.log(activeSlideOrder)
     
     if (activeSlideOrder === amountSlideOrder) activeSlideOrder = 0
     if (activeSlideOrder < 0) activeSlideOrder = amountSlideOrder - 1
 
     slideOrder.children[activeSlideOrder].style.order = -1
-    slideOrder.style.transition = `all 3s ease`
+    let animationActive = true;
+    slideOrder.classList.add('animation')
+
 }
 
 next.addEventListener('click',()=>{
@@ -42,11 +44,11 @@ prev.addEventListener('click',()=>{
 });
 
 nextOrder.addEventListener('click',()=>{
-    showSlideOrder(1)
+    if(!animationActive) showSlideOrder(1)
 });
 
 prevOrder.addEventListener('click',()=>{
-    showSlideOrder(-1)
+    if(!animationActive) showSlideOrder(-1)
 });
 
 slide.addEventListener('transitionend', () => {
@@ -61,5 +63,15 @@ slide.addEventListener('transitionend', () => {
         slide.style.transition = `none`
     }
 })
+
+slideOrder.addEventListener('animationend', () => {
+    slideOrder.classList.remove('animation')
+    animationActive = false
+})
+
+// slideOrder  .addEventListener('transitionstart', () => {
+//     console.log('start')
+//     slideOrder.classList.add('animation')
+// })
 
 showSlide()
