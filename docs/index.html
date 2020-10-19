@@ -4,10 +4,12 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="./style.css">
+	<link rel="stylesheet" href="./style-order.css">
 	<title>Carrusel - JS</title>
 </head>
 <body>
 	<h1 class="title">Taguara Digital</h1>
+	<h2 class="sub-title">Using clone slide (first & last</h2>
 	<section class="carousel">
 		<article class="slider"> <!-- carousel-container -->
 			<div class="slide" id="slide">
@@ -24,6 +26,25 @@
 
 		<button class="btn-dir prev" id="prev">&lang;</button>
 		<button class="btn-dir next" id="next">&rang;</button>
+
+	</section>
+
+
+	<h2 class="sub-title">Using order flex to move slider </h2>
+	<section class="carousel-order">
+		<article class="slider"> <!-- carousel-container -->
+			<div class="slide-order" id="slide-order">
+				<div class="img-cont1"><img src="./assets/images/f1.jpg" alt=""></div>
+				<div class="img-cont1"><img src="./assets/images/f2.jpg" alt=""></div>
+				<div class="img-cont1"><img src="./assets/images/f3.png" alt=""></div>
+				<div class="img-cont1"><img src="./assets/images/f4.png" alt=""></div>
+				<div class="img-cont1"><img src="./assets/images/f5.png" alt=""></div>
+				<div class="img-cont1"><img src="./assets/images/f6.png" alt=""></div>
+			</div>
+		</article>
+
+		<button class="btn-dir prev" id="prev-order">&lang;</button>
+		<button class="btn-dir next" id="next-order">&rang;</button>
 
 	</section>
 

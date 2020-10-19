@@ -30,8 +30,15 @@ body {
 
 .title {
   margin-top: 2em;
-  margin-bottom: 2em;
   font-size: 32px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.sub-title {
+  margin-top: 2em;
+  margin-bottom: 1em;
+  font-size: 16px;
   text-transform: uppercase;
   text-align: center;
 }
